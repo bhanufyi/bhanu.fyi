@@ -10,7 +10,7 @@
     "build": "next build",
     "build:analyze": "contentlayer build & ANALYZE=true next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
-    "export": "contentlayer build & next build && next export",
+    "export": "contentlayer build & next build",
     "compile": "tsc --watch",
     "typecheck": "tsc -p tsconfig.json",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --cache",
