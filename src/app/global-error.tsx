@@ -1,8 +1,5 @@
 "use client";
 
-import { captureException } from "@sentry/nextjs";
-import { useEffect } from "react";
-
 import {
   inter_font,
   iosevka_font,
@@ -10,16 +7,11 @@ import {
 } from "@/lib/domains/fonts";
 
 export default function GlobalError({
-  error,
   reset,
 }: {
   error: Error;
   reset: () => void;
 }) {
-  useEffect(() => {
-    captureException(error);
-  }, [error]);
-
   return (
     <html
       lang="en"
