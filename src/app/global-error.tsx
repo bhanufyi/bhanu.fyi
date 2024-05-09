@@ -1,24 +1,31 @@
-import "./global.css";
+"use client";
 
-import NextTopLoader from "nextjs-toploader";
+import { captureException } from "@sentry/nextjs";
+import { useEffect } from "react";
 
-import { SITE_DESCRIPTION, SITE_TITLE_APPEND, SITE_URL } from "@/config";
 import {
   inter_font,
   iosevka_font,
   eb_garamond_font,
 } from "@/lib/domains/fonts";
 
-export default function RootLayout({
-  children,
+export default function GlobalError({
+  error,
+  reset,
 }: {
-  children: React.ReactNode;
+  error: Error;
+  reset: () => void;
 }) {
+  useEffect(() => {
+    captureException(error);
+  }, [error]);
+
   return (
     <html
       lang="en"
       dir="ltr"
       className={`scroll-pt-16 scroll-smooth ${inter_font.variable} ${iosevka_font.variable} ${eb_garamond_font.variable}`}
+      suppressHydrationWarning
     >
       <head>
         <link rel="icon" href="/favicon.png" />
@@ -29,49 +36,12 @@ export default function RootLayout({
             __html: blockingScriptSetInitialColorScheme,
           }}
         ></script>
-        <NextTopLoader showSpinner={false} color={"#c1740c"} />
-        {children}
+        <h2>Something went wrong!</h2>
+        <button onClick={() => reset()}>Try again</button>
       </body>
     </html>
   );
 }
-
-export const metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: `Hello hello! ${SITE_TITLE_APPEND}`,
-  description: SITE_DESCRIPTION,
-  openGraph: {
-    title: `👋 Hello! ${SITE_TITLE_APPEND}`,
-    description: SITE_DESCRIPTION,
-    url: SITE_URL,
-    type: "website",
-  },
-  twitter: {
-    title: `👋 Hello! ${SITE_TITLE_APPEND}`,
-    description: SITE_DESCRIPTION,
-    card: "summary_large_image",
-    creator: "@bhanufyi",
-    site: "@bhanufyi",
-  },
-  appleWebApp: {
-    title: "Bhanu's website",
-    statusBarStyle: "default",
-    capable: true,
-  },
-  icons: {
-    icon: "/favicon.png",
-  },
-  other: {
-    "mobile-web-app-capable": "yes",
-  },
-};
-
-export const viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#C1A207" },
-    { media: "(prefers-color-scheme: dark)", color: "#C1740C" },
-  ],
-};
 
 const blockingScriptSetInitialColorScheme = `(function() {
 	function setInitialColorScheme() {
@@ -116,4 +86,5 @@ const blockingScriptSetInitialColorScheme = `(function() {
 	setInitialColorScheme();
 })()
 
-// IIFE!`;
+// IIFE!
+`;

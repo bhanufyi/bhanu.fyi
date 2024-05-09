@@ -1,0 +1,8 @@
+# *
+User-agent: *
+
+# Host
+Host: https://bhanu.fyi
+
+# Sitemaps
+Sitemap: https://bhanu.fyi/sitemap.xml
