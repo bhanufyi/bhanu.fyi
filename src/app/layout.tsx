@@ -1,5 +1,6 @@
 import "./global.css";
 
+import { type Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
 
 import { SITE_DESCRIPTION, SITE_TITLE_APPEND, SITE_URL } from "@/config";
@@ -36,7 +37,7 @@ export default function RootLayout({
   );
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: `Hello hello! ${SITE_TITLE_APPEND}`,
   description: SITE_DESCRIPTION,
@@ -45,6 +46,14 @@ export const metadata = {
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/bhanu.png`,
+        width: 1200,
+        height: 630,
+        alt: "Bhanu's website",
+      },
+    ],
   },
   twitter: {
     title: `👋 Hello! ${SITE_TITLE_APPEND}`,
@@ -52,6 +61,14 @@ export const metadata = {
     card: "summary_large_image",
     creator: "@bhanufyi",
     site: "@bhanufyi",
+    images: [
+      {
+        url: `${SITE_URL}/bhanu.png`,
+        width: 1200,
+        height: 630,
+        alt: "Bhanu's website",
+      },
+    ],
   },
   appleWebApp: {
     title: "Bhanu's website",
