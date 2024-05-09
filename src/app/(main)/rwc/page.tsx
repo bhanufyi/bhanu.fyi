@@ -7,8 +7,6 @@ import { ViewsCounter } from "@/lib/components/ViewsCounter";
 import { fetchGist } from "@/lib/domains/GitHub";
 import { getKarmaHighlighter } from "@/lib/domains/shiki";
 
-export const runtime = "edge";
-
 const GITHUB_RWC_GIST_ID = process.env.GITHUB_RWC_GIST_ID!;
 
 export default async function RWCPage() {
