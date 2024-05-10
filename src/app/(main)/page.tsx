@@ -6,6 +6,7 @@ import { MDXContent } from "@/lib/components/MDX";
 import { SocialLinks } from "@/lib/components/SocialLinks";
 import { Gradient } from "@/lib/components/Typography";
 import { ViewsCounter } from "@/lib/components/ViewsCounter";
+import profileImg from "@/public/bhanu.png";
 import { allPages } from "contentlayer/generated";
 
 export default function HomePage() {
@@ -23,7 +24,7 @@ export default function HomePage() {
       <div className="my-10 flex items-center justify-center">
         <div className="relative">
           <Image
-            src="/bhanu.png"
+            src={profileImg}
             alt="Bhanu"
             width="128"
             height="128"
