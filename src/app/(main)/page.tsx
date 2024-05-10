@@ -28,6 +28,7 @@ export default function HomePage() {
             width="128"
             height="128"
             quality="100"
+            placeholder="blur"
             priority={true}
             className="h-32 w-32 rounded-full border-4 border-white"
           />
