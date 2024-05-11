@@ -196,12 +196,26 @@ const experiences = [
         }}
       >
         <li>
-          Developed an online compiler feature for programming assignments using
-          Sphere Engine API with parallel execution of test cases.
+          <strong>Core Member of Google DSC (2020-2021):</strong> Conducted
+          workshops on web and app development, machine learning, and
+          competitive coding for 2nd and 3rd year students. Gave sessions on
+          Git, GitHub actions, and open source contribution.
         </li>
         <li>
-          Fixed the breaking changes in the Material UI Components in the front
-          end.
+          <strong>IE Student Coordinator (2018-2022):</strong> Organized several
+          events including Bellman Crown, a national level coding competition, a
+          web design contest, reverse coding event, and career guidance sessions
+          with alumni.
+        </li>
+        <li>
+          <strong>Cisco Campus Ambassador (2021-2022):</strong> Assisted final
+          year students in securing internships through a partnership between
+          CISCO and AICTE. Facilitated courses on cybersecurity, packet tracer,
+          and cybersecurity essentials.
+        </li>
+        <li>
+          <strong>Street Cause Member, Social Impact Team (2020-2021):</strong>{" "}
+          Helped raise funds to support the needy during the COVID-19 pandemic.
         </li>
       </ListWrapper>
     ),
