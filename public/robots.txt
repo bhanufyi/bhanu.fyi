@@ -1,8 +1,9 @@
-# *
 User-agent: *
+Disallow: /_next/
+Disallow: /cdn-cgi/
 
 # Host
-Host: https://bhanu.fyi
+Host: https://www.bhanu.fyi
 
 # Sitemaps
-Sitemap: https://bhanu.fyi/sitemap.xml
+Sitemap: https://www.bhanu.fyi/sitemap.xml
