@@ -11,7 +11,7 @@
     --black: 0 0 0;
 
     --color-primary: var(--amber-gold);
-    --color-secondary: var(--spice-orange);
+    --color-secondary: var(--amber-gold);
     --color-foreground: var(--not-black);
     --color-background: var(--not-white);
 
@@ -21,7 +21,7 @@
   }
   [data-color-scheme="dark"] {
     --color-primary: var(--spice-orange);
-    --color-secondary: var(--amber-gold);
+    --color-secondary: var(--spice-orange);
     --color-foreground: var(--not-white);
     --color-background: var(--black);
   }
@@ -33,7 +33,7 @@
 
     /* Use light mode when printing */
     [data-color-scheme="dark"] {
-      --color-primary: var(--amber-gold);
+      --color-primary: var(--spice-orange);
       --color-secondary: var(--spice-orange);
       --color-foreground: var(--not-black);
       --color-background: var(--not-white);

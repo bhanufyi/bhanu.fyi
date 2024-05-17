@@ -4,7 +4,6 @@ import { Suspense } from "react";
 
 import { MDXContent } from "@/lib/components/MDX";
 import { SocialLinks } from "@/lib/components/SocialLinks";
-import { Gradient } from "@/lib/components/Typography";
 import { ViewsCounter } from "@/lib/components/ViewsCounter";
 import profileImg from "@/public/bhanu.png";
 import { allPages } from "contentlayer/generated";
@@ -18,8 +17,8 @@ export default function HomePage() {
 
   return (
     <>
-      <h1 className="pb-10 pt-20 text-center font-serif text-6xl">
-        <Gradient>Hey, I&apos;m Bhanu!</Gradient>
+      <h1 className="pb-10 pt-20 text-center font-serif text-6xl text-primary">
+        Hey, I&apos;m Bhanu!
       </h1>
       <div className="my-10 flex items-center justify-center">
         <div className="relative">

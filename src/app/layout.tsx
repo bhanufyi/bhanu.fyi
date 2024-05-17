@@ -1,6 +1,6 @@
 import "./global.css";
 
-import { type Metadata } from "next";
+import { type Metadata, type Viewport } from "next";
 import NextTopLoader from "nextjs-toploader";
 
 import { SITE_DESCRIPTION, SITE_TITLE_APPEND, SITE_URL } from "@/config";
@@ -83,7 +83,11 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#C1A207" },
     { media: "(prefers-color-scheme: dark)", color: "#C1740C" },
