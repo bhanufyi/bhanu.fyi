@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --amber-gold: 193 63.699999999999996% 2.8%;
-    --spice-orange: 193 45.4% 4.55%;
+    --amber-gold: 193 162 7;
+    --spice-orange: 193 116 12;
     --not-white: 247 241 255;
     --not-black: 10 14 20;
     --black: 0 0 0;
