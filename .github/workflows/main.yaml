@@ -1,0 +1,49 @@
+name: Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    name: run sanity checks
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: corepack
+        id: corepack
+        run: |
+          corepack enable
+          echo "pnpm_store_path=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ steps.corepack.outputs.pnpm_store_path}}
+          key: pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-store-
+      - name: eslint cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules/.cache/eslint/.eslint-cache
+          key: eslint-cache-${{github.sha}}
+          restore-keys: |
+            eslint-cache-
+      
+      - run: pnpm install
+      - run: pnpm prettier
+      - run: pnpm eslint 

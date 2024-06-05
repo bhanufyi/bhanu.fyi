@@ -1,4 +1,8 @@
 {
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "advanced"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -11,9 +15,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "deno.enablePaths": [
-    "supabase/functions"
-  ],
+  "deno.enablePaths": ["supabase/functions"],
   "deno.lint": true,
   "deno.unstable": true,
   "editor.quickSuggestions": {
@@ -24,12 +26,7 @@
     "*.module.css": "postcss"
   },
   "mdx.experimentalLanguageServer": true,
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className",
-    "ngClass",
-    "tw"
-  ],
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "tw"],
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
   },
