@@ -106,11 +106,11 @@
   "packageManager": "pnpm@8.9.0",
   "nano-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix --cache",
+      "prettier --write --cache"
     ],
     "*.{json,md}": [
-      "prettier --write"
+      "prettier --write --cache"
     ]
   }
 }
