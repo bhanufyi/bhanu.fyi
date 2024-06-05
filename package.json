@@ -107,10 +107,13 @@
   "nano-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix --cache --cache-strategy=content --cache-location=node_modules/.cache/eslint/.eslint-cache",
-      "prettier --write --cache"
+      "eslint --cache  --cache-strategy=content --cache-location=node_modules/.cache/eslint/.eslint-cache",
+      "prettier --write --cache",
+      "prettier --check --cache"
     ],
     "*.{json,md}": [
-      "prettier --write --cache"
+      "prettier --write --cache",
+      "prettier --check --cache"
     ]
   }
 }

@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <h1 className="pb-10 pt-20 text-center font-serif text-6xl text-primary">
-        Hola, I&apos;m Bhanu!
+        Hey, I&apos;m Bhanu!
       </h1>
 
       <div className="my-10 flex items-center justify-center">
