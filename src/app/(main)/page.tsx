@@ -2,6 +2,7 @@ import { isUndefined } from "lodash-es";
 import Image from "next/image";
 import { Suspense } from "react";
 
+import Background from "@/lib/components/Background";
 import { MDXContent } from "@/lib/components/MDX";
 import { SocialLinks } from "@/lib/components/SocialLinks";
 import { ViewsCounter } from "@/lib/components/ViewsCounter";
@@ -36,6 +37,7 @@ export default function HomePage() {
         </div>
       </div>
       <MDXContent code={post.body.code} components={{ SocialLinks }} />
+      <Background />
       <Suspense>
         <ViewsCounter slug="/" hidden />
       </Suspense>
