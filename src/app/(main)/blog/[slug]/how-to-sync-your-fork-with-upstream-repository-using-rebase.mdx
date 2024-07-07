@@ -1,0 +1,89 @@
+---
+title: "How to Sync Your Fork with the Upstream Repository"
+description: "Learn how to keep your GitHub fork updated with the latest changes from the original repository using rebase. This guide provides step-by-step instructions for a clean and efficient sync process."
+published: true
+published_at: "2024-07-06"
+---
+Forking a repository on GitHub allows you to make changes to a project without affecting the original repository. However, to keep your fork updated with the latest changes from the original (upstream) repository, you need to regularly sync your fork. In this blog, I'll guide you through the process of syncing your fork using `rebase` instead of `merge` for a cleaner commit history. For a visual reference, you can check out [this video by Kent C. Dodds](https://youtu.be/k6KcaMffxac?t=1692), where he explains the process in detail.
+
+### Step-by-Step Guide
+
+1. **Fork the Repository**
+    - Go to the GitHub page of the repository you want to fork.
+    - Click the "Fork" button at the top right of the page.
+        
+        ![fork](https://supa.bhanu.fyi/storage/v1/object/public/assets/fork.png)
+        
+    
+    - This will create a copy of the repository under your GitHub account.
+2. **Clone Your Fork Locally**
+    
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/YOUR_FORKED_REPO.git
+    cd YOUR_FORKED_REPO
+    ```
+    
+3. **Add the Main Repository as a Remote**
+    
+    ```bash
+    git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
+    # git remote add upstream https://github.com/bhanufyi/bhanu.fyi.git
+    ```
+    
+4. **Fetch the Latest Changes from the Main Repository**
+    
+    ```bash
+    git fetch upstream
+    ```
+    
+5. **Set the Upstream Branch for Your Local `main` Branch**
+    
+    ```bash
+    git branch --set-upstream-to=upstream/main main
+    ```
+    
+6. **Pull the Latest Changes from the Upstream `main` Branch**
+    
+    ```bash
+    git pull --rebase
+    ```
+    
+
+### Why Use Rebase Instead of Merge?
+
+When you use `merge`, it creates a merge commit, which can clutter your project's commit history. By using `rebase`, you apply your changes on top of the latest commits from the upstream repository, resulting in a cleaner, linear history. This makes it easier to understand and navigate through the commit log.
+
+### Summary of Commands
+
+Here's a quick summary of the commands you'll use:
+
+```bash
+# Clone your fork
+git clone https://github.com/YOUR_USERNAME/YOUR_FORKED_REPO.git
+cd YOUR_FORKED_REPO
+
+# Add the main repository as a remote
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
+# git remote add upstream https://github.com/bhanufyi/bhanu.fyi.git
+
+# Fetch the latest changes from the main repository
+git fetch upstream
+
+# Set the upstream branch for your local main branch
+git branch --set-upstream-to=upstream/main main
+
+# Pull the latest changes from the upstream main branch
+git pull --rebase
+```
+
+Replace `YOUR_USERNAME`, `YOUR_FORKED_REPO`, `ORIGINAL_OWNER`, and `ORIGINAL_REPO` with the appropriate values.
+
+### Additional Resources
+
+For more details, you can refer to the [official GitHub documentation on syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+
+Remember, keeping your fork in sync with the upstream repository ensures that you have the latest features, bug fixes, and improvements. Happy coding!
+
+---
+
+If you have any questions or need further clarification, feel free to leave a comment below. Let's keep our repositories clean and up-to-date!

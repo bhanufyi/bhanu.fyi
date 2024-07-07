@@ -43,7 +43,7 @@ jobs:
           key: eslint-cache-${{github.sha}}
           restore-keys: |
             eslint-cache-
-      
+
       - run: pnpm install
       - run: pnpm prettier
-      - run: pnpm eslint 
+      - run: pnpm eslint
