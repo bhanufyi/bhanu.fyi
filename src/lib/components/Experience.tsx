@@ -315,6 +315,25 @@ const experiences = [
 
 const education = [
   {
+    duration: 'Aug "24 - Present',
+    tags: ["M.S", "Computer Science"],
+    tagBgColors: [colorMap["full-time"]],
+    href: "https://www.ufl.edu",
+    get title() {
+      return (
+        <LinkWrapper href={this.href} linkIcon>
+          University of Florida
+        </LinkWrapper>
+      );
+    },
+    location: "Gainesville, FL",
+    skills: [
+      "Math of Intelligent Systems",
+      "Advanced Data Structures",
+      "Distributed Operating Systems Principles",
+    ],
+  },
+  {
     duration: "Jul '18 - Jun '22",
     tags: ["B.E", "CSE"],
     tagBgColors: [colorMap["full-time"], colorMap["internship"]],
@@ -480,7 +499,7 @@ export const Education = () => (
                       backgroundColor: colorMap["full-time"],
                     },
                   }}
-                  key={`exp-${index}`}
+                  key={`edu-${index}`}
                 />
               ))}
             </div>
