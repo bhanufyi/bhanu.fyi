@@ -81,6 +81,43 @@ export const Tag: React.FC<{
 
 const experiences = [
   {
+    duration: "Aug '24 - Present",
+    tags: ["Full Stack Engineer"],
+    tagBgColors: [colorMap["internship"]],
+    href: "https://www.ufl.edu",
+    get title() {
+      return (
+        <LinkWrapper href={this.href} linkIcon>
+          Full Stack Engineer <span className="font-normal">at</span> University
+          of Florida
+        </LinkWrapper>
+      );
+    },
+    location: "Gainesville, FL",
+    desc: (
+      <ListWrapper
+        liProps={{
+          className: "max-w-[385px]",
+        }}
+      >
+        <li>
+          Developed a diagnostic tool to monitor Parkinson’s disease progression
+          by analyzing patient videos through precise motion detection using the{" "}
+          <strong>YOLOv8 algorithm</strong>, <strong>React.js</strong>,{" "}
+          <strong>Plotly.js</strong>, <strong>Django</strong>,{" "}
+          <strong>PyTorch</strong>, and <strong>MediaPipe</strong>, benefiting
+          over <strong>50K patients</strong>.
+        </li>
+        <li>
+          Containerized the application into a <strong>Docker</strong> image and
+          repurposed it as a desktop application using <strong>Electron</strong>{" "}
+          and <strong>PyInstaller</strong>, enabling local execution and
+          ensuring patient privacy by eliminating network data transmission.
+        </li>
+      </ListWrapper>
+    ),
+  },
+  {
     duration: "Jun '22 - Present",
     tags: ["full-time"],
     skills: [
@@ -114,19 +151,51 @@ const experiences = [
         }}
       >
         <li>
-          Developed and implemented email sequences from the ground up,
-          resulting in improved marketing campaign performance.
+          Deployed a self-hosted <strong>n8n</strong> marketing instance
+          executing <strong>2 million</strong> workflows per month on a{" "}
+          <strong>$200</strong> infrastructure, achieving{" "}
+          <strong>$10,000</strong> monthly savings.
         </li>
         <li>
-          Revamped the existing email architecture to reduce duplication and
-          improve overall efficiency.
+          Redesigned CMA Reports, reducing churn from{" "}
+          <strong>30% to 12%</strong> and driving sales with{" "}
+          <strong>400 active subscriptions</strong>, generating{" "}
+          <strong>$160,000</strong> in monthly recurring revenue, enhancing
+          long-term profitability.
         </li>
         <li>
-          Implemented Twilio SMS API to improve appraisal conversion rates in
-          France and Spain.
+          Introduced an email sequences feature that produces{" "}
+          <strong>1,000 leads</strong> monthly, significantly lowering lead
+          acquisition costs by <strong>$200,000</strong> and yielding{" "}
+          <strong>$100,000</strong> in revenue, streamlining marketing efforts
+          and increasing ROI.
         </li>
         <li>
-          Assisted in the migration from a custom GraphQL API to Hasura API.
+          Refactored inquiry processing from{" "}
+          <strong>16 external portals</strong>, handling approximately{" "}
+          <strong>2,000</strong> inquiries per month by parsing emails from
+          various sources, boosting operational performance by{" "}
+          <strong>40%</strong>.
+        </li>
+        <li>
+          Devised a segmented backup strategy in <strong>PostgreSQL</strong> by
+          separating pre-data and post-data segments and using{" "}
+          <strong>pg_sample</strong> for efficient database sampling, shrinking
+          development branch data from <strong>6GB to 500MB</strong>—a reduction
+          of approximately <strong>92%</strong>.
+        </li>
+        <li>
+          Accelerated data obfuscation by splitting the process into two stages,
+          reducing time from <strong>1.5 hours to 40 minutes</strong>—a{" "}
+          <strong>56%</strong> decrease—significantly enhancing developer
+          productivity.
+        </li>
+        <li>
+          Enhanced <strong>Next.js</strong> page delivery by storing
+          server-rendered pages in <strong>MongoDB</strong> and implementing
+          caching with <strong>Cloudflare Cache API</strong>, cutting response
+          times from <strong>160ms to 40ms</strong>—a <strong>75%</strong>{" "}
+          improvement in site speed.
         </li>
       </ListWrapper>
     ),
@@ -152,18 +221,35 @@ const experiences = [
         }}
       >
         <li>
-          Enhanced the leads list by adding various filters, providing agents
-          with more flexibility when reviewing leads.
+          Optimized SMS costs by switching to <strong>GSM-7</strong> encoding
+          from <strong>UTF-8</strong> and keeping messages under 140 characters,
+          reducing expenses to <strong>$10</strong> using a self-hosted
+          shortener with <strong>Cloudflare Workers</strong> and{" "}
+          <strong>KV storage</strong>, saving <strong>$12,000</strong> monthly.
         </li>
         <li>
-          Deployed the appraisal chatbot to new countries (Germany, UK, Italy),
-          expanding the business in those regions.
+          Migrated from a legacy <strong>GraphQL Relay API</strong> using{" "}
+          <strong>Knex.js</strong> to <strong>Hasura</strong>, leveraging
+          Hasura&rsquo;s fine-grained permissions instead of{" "}
+          <strong>PostgreSQL Row-Level Security (RLS)</strong>. This transition
+          reduced the codebase by <strong>400,000 lines</strong> and improved
+          query performance by eliminating RLS overhead.
         </li>
         <li>
-          Implemented workflows to notify agents of property transactions using
-          event triggers and n8n.
+          Expanded the appraisal chatbot to{" "}
+          <strong>Italy, Germany, and the UK</strong>, achieving{" "}
+          <strong>$360K ARR</strong> and <strong>37K</strong> organic users in
+          Italy. Established staging/production routes, improved SEO, and
+          configured multi-tenancy.
         </li>
-        <li>Helped to migrate the code base from Flow to TypeScript.</li>
+        <li>
+          Migrated codebase and libraries from <strong>Flow</strong> to{" "}
+          <strong>TypeScript</strong>, updated custom React Relay hooks to
+          built-in hooks (v11), and transitioned <strong>Material-UI</strong>{" "}
+          from v4 to v5 with MUI utilities, resulting in a{" "}
+          <strong>15% reduction in code complexity</strong> and a{" "}
+          <strong>20% improvement</strong> in maintenance efficiency.
+        </li>
       </ListWrapper>
     ),
   },
@@ -183,8 +269,7 @@ const experiences = [
     get title() {
       return (
         <LinkWrapper href={this.href} linkIcon>
-          Associate Software Trainee <span className="font-normal">at</span>{" "}
-          Tidbeat
+          Associate Software Trainee <span className="font-normal" /> at Tidbeat
         </LinkWrapper>
       );
     },
@@ -196,12 +281,32 @@ const experiences = [
         }}
       >
         <li>
-          Developed an online compiler feature for programming assignments using
-          Sphere Engine API with parallel execution of test cases.
+          Developed a microservice for programming assignments using{" "}
+          <strong>Spring Boot</strong>, <strong>Groovy</strong>, and{" "}
+          <strong>Netflix OSS</strong> (Zuul, Ribbon), integrating the{" "}
+          <strong>Sphere Engine API</strong>, resulting in a{" "}
+          <strong>30% faster</strong> submission processing.
         </li>
         <li>
-          Fixed the breaking changes in the Material UI Components in the front
-          end.
+          Implemented storage of uploaded course materials in{" "}
+          <strong>Google Cloud Storage (GCS)</strong>, improving scalability and
+          reducing storage costs by <strong>25%</strong>.
+        </li>
+        <li>
+          Integrated code quality tools like <strong>Lint-staged</strong>,{" "}
+          <strong>Husky</strong>, <strong>Prettier</strong>, and{" "}
+          <strong>ESLint</strong> into a <strong>React</strong> application to
+          enforce consistent code style, leading to a{" "}
+          <strong>100% reduction</strong> in style-related review comments and
+          significantly speeding up the development cycle.
+        </li>
+        <li>
+          Configured <strong>CI/CD</strong> pipelines by setting up{" "}
+          <strong>GitHub Actions</strong> to automate the deployment of a{" "}
+          <strong>React</strong> app to <strong>Vercel</strong> and
+          containerizing a <strong>Spring Boot</strong> application for{" "}
+          <strong>Google Cloud Run</strong>, reducing release time by{" "}
+          <strong>40%</strong> and improving deployment efficiency.
         </li>
       </ListWrapper>
     ),
