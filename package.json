@@ -104,7 +104,7 @@
   "engines": {
     "node": "20"
   },
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@9.12.1+sha256.91452fdfa46234ae447d46d5c4fc4e7e0a7058f90495c4b6f77f8beebbb154e3",
   "nano-staged": {
     "*.{js,jsx,ts,tsx}": [
       "pnpm lint:fix",
