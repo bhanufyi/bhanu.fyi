@@ -2,11 +2,10 @@ import { isUndefined } from "lodash-es";
 import Image from "next/image";
 import { Suspense } from "react";
 
-// import Background from "@/lib/components/Background";
 import { MDXContent } from "@/lib/components/MDX";
 import { SocialLinks } from "@/lib/components/SocialLinks";
 import { ViewsCounter } from "@/lib/components/ViewsCounter";
-import profileImg from "@/public/bhanu.png";
+import profileImg from "@/public/bhanu.jpeg";
 import { allPages } from "contentlayer/generated";
 
 export default function HomePage() {

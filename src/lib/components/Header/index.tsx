@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import lazy from "next/dynamic";
 import { type HTMLAttributes } from "react";
 
@@ -30,17 +32,13 @@ export const Header = ({ className }: HTMLAttributes<HTMLDivElement>) => (
     </a>
     <header className="mx-auto mt-1 grid h-full w-full max-w-[--max-width] grid-cols-[max-content_auto] content-center gap-8 px-2 py-4">
       <LinkTo href="/">
-        <svg
-          aria-label="Home"
-          width={25}
-          height={25}
-          viewBox="0 0 25 25"
-          xmlns="http://www.w3.org/2000/svg"
-          className="fill-primary text-primary"
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <title>Home</title>
-          <rect width="25" height="25" rx="6" fill="currentColor" />
-        </svg>
+          <div className="h-10 w-10 rounded-full bg-orange-500" />
+        </motion.div>
       </LinkTo>
       <div className="grid grid-flow-col place-items-center justify-center gap-x-4 justify-self-end">
         <NavbarDesktop />
