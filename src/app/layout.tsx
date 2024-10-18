@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${SITE_URL}/bhanu.png`,
+        url: `${SITE_URL}/bhanu.jpeg`,
         width: 1200,
         height: 630,
         alt: "Bhanu's website",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     site: "@bhanufyi",
     images: [
       {
-        url: `${SITE_URL}/bhanu.png`,
+        url: `${SITE_URL}/bhanu.jpeg`,
         width: 1200,
         height: 630,
         alt: "Bhanu's website",
