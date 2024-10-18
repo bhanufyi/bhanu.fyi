@@ -22,7 +22,7 @@ export default function GlobalError({
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className="min-h-screen overflow-hidden bg-background text-foreground selection:bg-secondary selection:text-background">
+      <body className="min-h-screen overflow-x-hidden bg-background text-foreground selection:bg-secondary selection:text-background">
         <script
           dangerouslySetInnerHTML={{
             __html: blockingScriptSetInitialColorScheme,
