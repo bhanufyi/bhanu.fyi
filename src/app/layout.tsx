@@ -30,7 +30,7 @@ export default function RootLayout({
             __html: blockingScriptSetInitialColorScheme,
           }}
         ></script>
-        <NextTopLoader showSpinner={false} color={"#c1740c"} />
+        <NextTopLoader showSpinner={false} color={"#f97316"} />
         {children}
       </body>
     </html>
