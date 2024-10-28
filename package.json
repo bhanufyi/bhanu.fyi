@@ -105,7 +105,7 @@
     "workerDirectory": "public"
   },
   "engines": {
-    "node": "20"
+    "node": ">=20"
   },
   "packageManager": "pnpm@9.12.1+sha256.91452fdfa46234ae447d46d5c4fc4e7e0a7058f90495c4b6f77f8beebbb154e3",
   "nano-staged": {
@@ -119,5 +119,8 @@
       "pnpm format",
       "pnpm prettier"
     ]
+  },
+  "volta": {
+    "node": "20.11.1"
   }
 }

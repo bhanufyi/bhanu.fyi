@@ -74,6 +74,7 @@ module.exports = {
   settings: {
     react: {
       version: "detect",
+      runtime: "automatic",
     },
     "import/resolver": {
       typescript: {},
@@ -85,6 +86,7 @@ module.exports = {
       extends: "plugin:mdx/recommended",
       rules: {
         "react/jsx-no-undef": "warn",
+        "react/react-in-jsx-scope": "off",
       },
     },
   ],

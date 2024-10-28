@@ -16,6 +16,7 @@ export default withContentlayer({
     remotePatterns: [
       { hostname: "avatars.githubusercontent.com" },
       { hostname: "i.imgur.com" },
+      { hostname: "media2.dev.to" },
     ],
   },
 });

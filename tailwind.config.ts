@@ -25,6 +25,13 @@ export default {
           "0%, 100%": { transform: "scale(0)" },
           "50%": { transform: "scale(1)" },
         },
+        blobMove: {
+          "0%, 100%": { transform: "translate(0px, 0px)" },
+          "25%": { transform: "translate(20px, -30px)" },
+          "50%": { transform: "translate(-30px, 20px)" },
+          "75%": { transform: "translate(30px, 30px)" },
+        },
+
         overlayShow: {
           from: { opacity: "0" },
           to: { opacity: "1" },
@@ -40,6 +47,7 @@ export default {
       animation: {
         overlayShow: "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
         contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        blobMove: "blobMove 8s ease-in-out infinite",
       },
     },
   },

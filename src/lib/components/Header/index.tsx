@@ -18,7 +18,7 @@ const ColorSchemeToggle = lazy(
 export const Header = ({ className }: HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "sticky top-0 z-10 h-[60px] w-screen bg-background",
+      "sticky top-0 z-50 h-[60px] w-screen bg-background",
       className,
     )}
     suppressHydrationWarning
