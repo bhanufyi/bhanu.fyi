@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-export const BackgroundGradient = () => (
+export const BackgroundGradient = ({ scrollY }: { scrollY: number }) => (
   <motion.div
     style={{
       position: "absolute",
